@@ -84,6 +84,7 @@ header .btn-tp{
   text-transform: uppercase;
   text-decoration: none;
   margin-left: 20px;
+  background: none;
 }
 
 header .btn-tp:hover{
@@ -210,7 +211,7 @@ h2{
   position: relative;
   margin: 124px 0;
   padding: 48px 0;
-  height: 500px;
+  min-height: 500px;
   background-image: url('../images/testimonial.png');
 }
 
@@ -289,7 +290,7 @@ h2{
 
 footer{
   width: 100%;
-  height: 250px;
+  min-height: 250px;
   background-color: #200C6D;
   display: flex;
   justify-content: center;
@@ -308,7 +309,7 @@ footer{
 footer li{
   cursor: pointer;
   color: #fff;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 footer li:hover{
@@ -322,6 +323,18 @@ footer li:hover{
 
   .nav-bar {
     position: relative;
+  }
+
+  .nav-menu{
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: all .3s ease-in-out;
+  }
+
+  .nav-menu.show{
+    transform: scaleY(1);
+    opacity: 1;
   }
 
   header ul{
@@ -344,9 +357,35 @@ footer li:hover{
     border-bottom: 1px solid rgba(204, 204, 204, 0.192);
   }
 
-  .btn-tp{
-    width: 100%;
+  header .nav-bar .btn-tp{
     margin: 0;
-    border-color: #fff;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    color: #EA9B24;
+  }
+
+  .reviews{
+    padding: 40px 16px;
+    min-height: 550px;
+  }
+
+  h2{
+    font-size: 1.8rem;
+  }
+
+  .reviews h2{
+    margin-bottom: 30px;
+  }
+
+  footer{
+    padding: 24px 0;
+  }
+
+  footer li{
+    font-size: 1.4rem;
+    margin: 16px 0;
+    display: block;
+    text-align: center;
   }
  }
